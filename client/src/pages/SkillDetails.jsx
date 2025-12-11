@@ -28,7 +28,7 @@ const SkillDetails = () => {
 
   const fetchComments = async () => {
     try {
-      const res = await axios.get(`/api/skills/${id}/comments`);
+      const res = await axios.get(`https://skillswap-ffy2.onrender.com/api/skills/${id}/comments`);
       setComments(res.data);
     } catch (err) {
       console.error(err);
@@ -54,7 +54,7 @@ const SkillDetails = () => {
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`/api/skills/${id}/comment`, { content: newComment });
+      await axios.post(`https://skillswap-ffy2.onrender.com/api/skills/${id}/comment`, { content: newComment });
       setNewComment('');
       fetchComments();
     } catch (err) {
