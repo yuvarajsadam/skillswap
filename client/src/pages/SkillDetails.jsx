@@ -43,7 +43,7 @@ const SkillDetails = () => {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this skill?')) {
       try {
-        await axios.delete(`/api/skills/${id}`);
+        await axios.delete(`https://skillswap-ffy2.onrender.com/api/skills/${id}`);
         navigate('/');
       } catch (err) {
         console.error(err);
