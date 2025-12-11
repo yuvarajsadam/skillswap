@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   const fetchSkills = async () => {
     try {
-      const res = await axios.get('/api/skills');
+      const res = await axios.get('https://skillswap-ffy2.onrender.com/api/skills');
       setSkills(res.data);
       setFilteredSkills(res.data);
     } catch (err) {
