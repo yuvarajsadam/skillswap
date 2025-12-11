@@ -19,7 +19,7 @@ const SkillDetails = () => {
 
   const fetchSkill = async () => {
     try {
-      const res = await axios.get(`/api/skills/${id}`);
+      const res = await axios.get(`https://skillswap-ffy2.onrender.com/api/skills/${id}`);
       setSkill(res.data);
     } catch (err) {
       console.error(err);
