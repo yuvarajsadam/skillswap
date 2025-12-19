@@ -19,7 +19,7 @@ const Profile = () => {
     if (effectiveId) {
       const fetchProfile = async () => {
         try {
-            const res = await axios.get(`https://skillswap-ffy2.onrender.com/api/users/${effectiveId}/skills`);
+            const res = await axios.get(`https://skillswap-3-d34q.onrender.com/api/users/${effectiveId}/skills`);
             setProfileSkills(res.data);
 
             // Calculate stats for charts
