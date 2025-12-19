@@ -15,9 +15,9 @@ const SkillForm = ({ onSuccess, onClose, initialData, isEdit }) => {
     e.preventDefault();
     try {
       if (isEdit) {
-        await axios.put(`https://skillswap-ffy2.onrender.com/api/skills/${initialData._id}`, formData);
+        await axios.put(`https://skillswap-3-d34q.onrender.com/api/skills/${initialData._id}`, formData);
       } else {
-        await axios.post('https://skillswap-ffy2.onrender.com/api/skills', formData);
+        await axios.post('https://skillswap-3-d34q.onrender.com/api/skills', formData);
       }
       onSuccess();
       onClose();
