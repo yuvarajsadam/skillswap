@@ -19,7 +19,7 @@ const SkillDetails = () => {
 
   const fetchSkill = async () => {
     try {
-      const res = await axios.get(`https://skillswap-ffy2.onrender.com/api/skills/${id}`);
+      const res = await axios.get(`https://skillswap-3-d34q.onrender.com/api/skills/${id}`);
       setSkill(res.data);
     } catch (err) {
       console.error(err);
@@ -28,7 +28,7 @@ const SkillDetails = () => {
 
   const fetchComments = async () => {
     try {
-      const res = await axios.get(`https://skillswap-ffy2.onrender.com/api/skills/${id}/comments`);
+      const res = await axios.get(`https://skillswap-3-d34q.onrender.com/api/skills/${id}/comments`);
       setComments(res.data);
     } catch (err) {
       console.error(err);
@@ -43,7 +43,7 @@ const SkillDetails = () => {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this skill?')) {
       try {
-        await axios.delete(`https://skillswap-ffy2.onrender.com/api/skills/${id}`);
+        await axios.delete(`https://skillswap-3-d34q.onrender.com/api/skills/${id}`);
         navigate('/');
       } catch (err) {
         console.error(err);
@@ -54,7 +54,7 @@ const SkillDetails = () => {
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`https://skillswap-ffy2.onrender.com/api/skills/${id}/comment`, { content: newComment });
+      await axios.post(`https://skillswap-3-d34q.onrender.com/api/skills/${id}/comment`, { content: newComment });
       setNewComment('');
       fetchComments();
     } catch (err) {
